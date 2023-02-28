@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Kids | Countdown</title>
+    <style>
+        .coundownContainer {
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
+        .coundownContainer>div {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            background: white;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+            font-size: 8.5rem;
+            text-align: center;
+        }
+
+        .coundownContainer > div span {
+            flex: 1;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <input id="timeCountdown" type="number" placeholder="Digite os minutos do countdown">
+        <button type="button" onclick="startCountdown()">Iniciar Countdown</button>
+        <div class="coundownContainer">
+            <div>
+                <span id="countdownMin"></span>
+            </div>
+            <span>:</span>
+            <div>
+                <span id="countdownSec"></span>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
