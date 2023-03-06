@@ -31,41 +31,44 @@
                 </div>
                 <div> 
                 </div>
-                <section class="formTimerValue">
+                <section class="formTimerValue" id="formTimerValue">
                     <div>
                         <div class="boxInputTimer">
-                            <input id="timerValue" type="number" required>
-                            <span>Digite o tempo da atividade</span>
+                            <input id="timerValue" class="inputTimerValue" type="number" required>
+                            <span>Digite o tempo em minutos</span>
                         </div>
+                        <span id="messageError">Digite um valor válido</span>
                         <div class="boxButton">
-                            <button type="button">Iniciar lançamento</button>
+                            <button id="btnStart" type="button" onclick="startCountdown()">Iniciar lançamento</button>
                         </div>
                     </div>
                 </section>
-                <div class="countdownContainer">
+                <div class="countdownContainer" id="countdownContainer">
                     <div class="boxCountdown">
                         <div class="boxDescription">
                             <h3>Minutos</h3>
                             <h3>Segundos</h3>
                         </div>
                         <div class="boxTimer">
-                            <span>44</span>
+                            <span id="countdownMin"></span>
                             <span>:</span>
-                            <span>28</span>
+                            <span id="countdownSec"></span>
                         </div>
                         <hr>
                         <div class="boxButton">
-                            <button type="button">Iniciar novo lançamento</button>
+                            <button type="button" onclick="newTimerValue()">Iniciar novo lançamento</button>
                         </div>
                         
                     </div>
                 </div>
             </div>
-            <div class="rocketContainer" >
-                <img src="./img/rocket.png"  data-tilt data-tilt-scale="1.1" alt="Foguete">
+            <div class="rocketContainer">
+                <img id="rocket" class="rocket" src="./img/Group 5.png" alt="Foguete">
+                <img class="rocketBg" src="./img/rocket.png" data-tilt data-tilt-glare data-tilt-max-glare="0.8" alt="bg">
             </div>
         </div>
     </main>
+    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 
